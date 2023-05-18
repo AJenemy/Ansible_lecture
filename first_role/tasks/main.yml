@@ -1,0 +1,16 @@
+---
+# tasks file for first_role
+- name: add index.html
+  file: 
+    path: /home/ec2-user/Ansible_Workbook/test.txt
+    state: touch
+
+- name: add line in file
+  lineinfile: 
+    path: /home/ec2-user/Ansible_Workbook/test.txt
+    line: "{{ line }}"
+
+- name: add line in file
+  lineinfile: 
+    path: /home/ec2-user/Ansible_Workbook/test.txt
+    line: "{{ line2 }}"

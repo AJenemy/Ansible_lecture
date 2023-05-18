@@ -1,0 +1,12 @@
+---
+- name: My first playbook
+  hosts: tags_Name_afriend*
+  # hosts: all
+  gather_facts: False 
+  become: True
+  vars_files:
+    - "vars.yaml"
+
+  roles:
+    - first_role
+    - second_role
